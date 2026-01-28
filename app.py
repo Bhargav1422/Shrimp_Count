@@ -19,7 +19,7 @@ NUM_PATCHES = st.sidebar.slider("Number of Random Patches", 5, 50, 25)
 MIN_CONTOUR_AREA = st.sidebar.slider("Min Shrimp Contour Area", 5, 50, 15)
 CALIBRATION_FACTOR = st.sidebar.slider("Calibration Factor", 0.5, 1.2, 0.91, 0.01)
 
-Optional: random seed for reproducibility
+#Optional: random seed for reproducibility
 RANDOM_SEED = 42
 random.seed(RANDOM_SEED)
 
