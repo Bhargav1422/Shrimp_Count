@@ -85,7 +85,7 @@ if uploaded_file is not None:
                 cv2.THRESH_BINARY_INV, 11, 2
             )
             # FIX: unpack two values for OpenCV 4.x
-            contours,  = cv2.findContours(thresh, cv2.RETREXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            contours,  = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
             return len([c for c in contours if cv2.contourArea(c) > MIN_CONTOUR_AREA])
 
         # ---------------------------
