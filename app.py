@@ -4,15 +4,15 @@ import numpy as np
 from PIL import Image
 import random
 
----------------------------
-Page configuration
----------------------------
+#---------------------------
+#Page configuration
+#---------------------------
 st.set_page_config(page_title="🦐 Shrimp Counter", layout="centered")
 st.title("🦐 Shrimp Counter")
 
----------------------------
-Sidebar parameters
----------------------------
+#---------------------------
+#Sidebar parameters
+#---------------------------
 st.sidebar.header("Settings")
 PATCH_SIZE = st.sidebar.slider("Patch Size (px)", 50, 200, 110)
 NUM_PATCHES = st.sidebar.slider("Number of Random Patches", 5, 50, 25)
@@ -23,9 +23,9 @@ Optional: random seed for reproducibility
 RANDOM_SEED = 42
 random.seed(RANDOM_SEED)
 
----------------------------
-1. Image upload
----------------------------
+#---------------------------
+#1. Image upload
+#---------------------------
 uploaded_file = st.file_uploader("Upload a bowl image (PNG/JPG)", type=["png","jpg","jpeg"])
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
