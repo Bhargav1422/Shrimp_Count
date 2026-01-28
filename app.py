@@ -77,7 +77,7 @@ if uploaded_file is not None:
                 blur_patch, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
                 cv2.THRESH_BINARY_INV, 11, 2
             )
-            contours,  = cv2.findContours(thresh, cv2.RETREXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            contours,  = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
             return len([c for c in contours if cv2.contourArea(c) > MIN_CONTOUR_AREA])
 
         # ---------------------------
