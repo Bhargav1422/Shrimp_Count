@@ -7,18 +7,18 @@ import random
 st.set_page_config(page_title="🦐 Shrimp Counter", layout="centered")
 st.title("🦐 Shrimp Counter")
 
----------------------------
-Sidebar Parameters
----------------------------
+#---------------------------
+#Sidebar Parameters
+#---------------------------
 st.sidebar.header("Settings")
 PATCH_SIZE = st.sidebar.slider("Patch Size (px)", 50, 200, 110)
 NUM_PATCHES = st.sidebar.slider("Number of Random Patches", 5, 50, 25)
 MIN_CONTOUR_AREA = st.sidebar.slider("Min Shrimp Contour Area", 5, 50, 15)
 CALIBRATION_FACTOR = st.sidebar.slider("Calibration Factor", 0.5, 1.2, 0.91, 0.01)
 
----------------------------
-1. IMAGE UPLOAD
----------------------------
+#---------------------------
+#1. IMAGE UPLOAD
+#---------------------------
 uploaded_file = st.file_uploader("Upload a bowl image (PNG/JPG)", type=["png","jpg","jpeg"])
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
